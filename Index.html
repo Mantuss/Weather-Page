@@ -1,0 +1,106 @@
+<!-- Name: Raymon Bikram Basnyat -->
+<!-- University id : 2059640 -->
+<!-- Prototype 3 -->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <!-- Linking Bootstrap icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <!-- Linking Css(Cascading Style Sheet) -->
+  <link rel="stylesheet" href="Style.css">
+  <title> Weather Forecast </title>
+</head>
+
+<body>
+  <!--- Main Body --->
+  <div id="main-body">
+
+    <!--- Inner elements of main body --->
+    <div id="inner">
+
+      <!--- Search --->
+      <div id="search">
+        <input type="text" id="cityname" value="blackpool" name="city" placeholder="City Name" autocomplete="off"
+          required>
+        <button id="butt" name="sub"><i class="bi bi-search" onclick="citySearched()"></i></button>
+      </div>
+
+      <!--- Current Weather Location --->
+      <div id="location">
+        <p id="loc"> NaN </p>
+      </div>
+
+      <!--- upper division of the card --->
+      <div id="upper">
+        <!--- Weather Icon --->
+        <div id="icon" align="center">
+          <i class="bi bi-cloud-slash"></i>
+        </div>
+        <!--- Weather Description --->
+        <div id="description" align="center">
+          <p id="desc" align="center"></p>
+        </div>
+      </div>
+      <!--- middle division of the card --->
+      <div id="middle" align="center">
+        <!--- Temperature --->
+        <div id="temp">
+          <p id="degree"> 0&#176;C </p>
+        </div>
+        <!--- High or Low temperature --->
+        <div id="lowHigh">
+          <div align="left">
+            <i class="bi bi-thermometer-high"></i>
+            <label id="temp-max">0&#176;C</label>
+          </div>
+          <div align="left">
+            <i class="bi bi-thermometer"></i>
+            <label id="temp-min">0&#176;C</label>
+          </div>
+        </div>
+      </div>
+      <!-- Conversion of celsius to fahrenheit and viseversa -->
+      <div id="conversion">
+        <span id="celsius" onclick="convert('c')">
+          °C
+        </span> |
+        <span id="fahren" onclick="convert('f')">
+          °F
+        </span>
+      </div>
+      <!-- Last updated time -->
+      <div id="updated">
+        <span><i class="bi bi-arrow-counterclockwise"></i></span>
+        <span id="seconds"> Connecting Lost </span>
+      </div>
+      <!--- lower division of the card --->
+      <div id="lower">
+        <div id="lower-inner">
+          <!--- Wind Speed --->
+          <span id="win">
+            <i class="bi bi-wind"></i>
+            <label id="wind">0 km/ph</label>
+          </span>
+          <!--- Humidity --->
+          <span id="hum">
+            <i class="bi bi-moisture"></i>
+            <label id="Humid">0%</label>
+          </span>
+          <!--- Pressure --->
+          <span id="pressure">
+            <i class="bi bi-speedometer2"></i>
+            <label id="press">0 pa</label>
+          </span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="Script.js"></script>
+</body>
+
+</html>

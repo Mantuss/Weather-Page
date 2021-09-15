@@ -1,0 +1,301 @@
+/*
+   Name: Raymon Bikram Basnyat
+   Uni id: 2059650
+   Prototype 3
+
+*/
+
+/* importing fonts from google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+/* 
+   setting up background image for the page,
+   setting up fonts for the page
+   setting the width and height of the page 100%
+   setting the margin and padding of the page 0
+*/
+body{
+  background-image: url('https://source.unsplash.com/featured?weather');
+  font-family: 'Architects Daughter', cursive;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* 
+   search bar for searching different cities 
+   changing the background color of the division
+   changing the height of the division
+   changing the color of the text in the division
+*/
+#search
+{
+  width: 100%;
+  background-color: rgba(40, 55, 71, 0.8);
+  height: 60px;
+  color: #fff;
+}
+
+/* 
+  changing the background of the input text box
+  setting the margin-top, margin-left and padding-bottom of the search/text box
+  setting the width of the search box 
+  removing the outline of the text box to make it clean
+  changing the font size, color, caret-color(visible marker) in the text box
+*/
+
+#search input[type="text"]
+{
+  font-family: 'Architects Daughter', cursive;
+  background-color: rgba(40, 55, 71, 0.1);
+  margin-top: 10px;
+  margin-left: 15px;
+  width: 90%;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #fff!important;
+  color: #fff;
+  font-size: 20px;
+  caret-color: #fff;
+  padding-bottom: 5px;
+}
+
+/* 
+  changing the color of the placeholder in the text box 
+  making the placeholder transparent
+*/
+
+#search input[type="text"]::placeholder
+{
+  color: #fff;
+  opacity: 0.4;
+  font-family: 'Architects Daughter', cursive;
+}
+
+/* 
+   button that triggers the search of the weather data for the given city
+   setting up the height, background, margin, font-size and color of the button
+   removing the box shadow of the button for it to blend in
+   position absolute so that it can float above the search bar
+   cursor pointer is also give to make the button a bit seemless
+*/
+#search button
+{
+  height: 20px;
+  background-color: rgba(40, 55, 71, 0.1);
+  margin-right: -30px;
+  font-size: 25px;
+  color: #fff;
+  box-shadow: none;
+  border: none;
+  padding-top: 10px !important;
+  position: absolute;
+  margin-left: -35px;
+  cursor: pointer;
+}
+
+/* 
+   Updated time/Latest updated time 
+   changing the color, font size and adding margin to the division
+*/
+
+#updated
+{
+  color: #fff;
+  margin-top: 60px;
+  font-size: 16px;
+  margin-left: 18px;
+}
+
+/* 
+  division where the lcoation has been displayed
+  setting up the font size, margin-left, margin-top and th color of the div
+*/
+
+#location
+{
+  color: #fff;
+  font-size: 18px;
+  margin-left: 17px;
+  margin-top: -8px;
+}
+
+/* 
+  main body of the page
+  setting the width of the main body 100%
+*/
+
+ #main-body{
+  width: 100%;
+}
+
+/* 
+   division for the weather card in the center
+   making the margin-left and margin-right auto to push the card in the center
+   setting the height of the main weather page
+   setting the background color of the card and making it transparent
+*/
+
+#inner{
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 90px;
+  height: 478px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+
+/*
+   division where the search bar has been placed
+   setting up the margin-top and the height of the upper division
+*/
+
+#upper{
+  margin-top: 25px;
+  height: 120px;
+}
+
+/* 
+   division for the icon based on the weather description 
+   changing the color and the font-size of the icon
+*/
+
+#icon{
+  color: #fff;
+  font-size: 75px;
+}
+
+/* 
+   division for the weather discription 
+   setting the color. font-size, width and the margin-top of the division
+*/
+
+#description{
+  color: #fff;
+  font-size: 25px;
+  width: 100%;
+  margin-top: -21px;
+}
+
+/* 
+  Middle division of the page
+  setting the width 100% and height 80px
+  setting the margin-top 
+*/
+
+#middle{
+  width: 100%;
+  height:80px;
+  margin-top: 25px;
+}
+
+
+/*
+  division for the converted data obtained from javascript 
+  giving height, width height and font size to the division
+  cursor pointer is also give to make the division a bit seemless
+*/
+#conversion
+{
+  color:#fff;
+  width: 20%;
+  height: 30px;
+  float: right;
+  font-size: 22px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+/* 
+   division for the main temperature of the page
+   setting width for the division
+   setting color, font of the test inside the main temperature division
+   setting margin top, margin-left to the division
+   boarder left to make a vertical line between twon divisions
+*/
+
+#degree{
+  width:31%;
+  color: #fff;
+  font-size: 50px;
+  cursor: pointer;
+  margin-top: 5px;
+  margin-left: 82px;
+  float: left;
+  border-right: 1px solid white;
+}
+
+/* 
+   division for the higher and lower temperature
+   setting the width, font-size, margin-top and margin right for the division
+   floating the division to the right
+   setting cursor pointer inorder to make it seem less
+*/
+
+#lowHigh{
+  width: 20%;
+  color: #fff;
+  font-size: 20px;
+  margin-top: 12px;
+  margin-right: 105px;
+  float: right;
+  cursor: pointer;
+}
+
+/*setting cursor pointer for the label of the icon which is the temperature */
+
+#lowHigh label{
+  cursor: pointer;
+}
+
+/* 
+   Division used to show the wind, humidity and Pressure
+   giving the width 100% in order to make it equal to the main inner division
+   changing the background color with some level of transparencey
+   setting margin top and height for the division
+*/
+
+#lower{
+  width: 100%;
+  background-color: rgba(40, 55, 71, 0.8);
+  margin-top: 10px;
+  height: 40px;
+}
+
+/* 
+   inner division of the lower division
+   giving padding top to the inner division
+   changing the color and size of the text in the lower division
+*/
+
+#lower-inner{
+  padding-top: 8px;
+  text-align: center;
+  color: white;
+  font-size: 17px;
+}
+
+/* 
+   Humidity, Wind and Pressure 
+   adding margin in the division
+   keeping the divsion inline using float and margin
+*/
+
+#win{
+  float: left;
+  margin-left: 18px;
+}
+
+#hum{
+  margin-right: 11px;
+}
+
+#pressure{
+  float: right;
+  margin-right: 24px;
+}
+
+
