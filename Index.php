@@ -30,7 +30,7 @@
         // city "$_GET['city']" name is taken after submitting the form in html.
         // Java script calls the php api with city name in it. 
         // '.$_GET['city'].' gets the name of the city from the url.
-        $url = 'http://api.openweathermap.org/data/2.5/weather?q='.$_GET['city'].'&appid=0de6fc00abc79dc9398e8181bd49765c';
+        $url = 'http://api.openweathermap.org/data/2.5/weather?q='.$_GET['city'].'&appid= {API-KEY}';
 
         // Decoding the JSON data obtained from the Openweathermap.org.
         // Json_decode is used for decoding the JSON string.
